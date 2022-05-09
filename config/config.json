@@ -1,3 +1,5 @@
 {
-    "token": "your-token-here"
+    "token": "your-token-here / 당신의 토큰을 입력하세요.",
+    "guildId":"your guild Id here / 당신의 길드 ID를 여기다가 입력하세요.",
+    "clientId":"your clientId here / 당신의 클라이언트 ID를 여기다가 입력하세요."
 }
