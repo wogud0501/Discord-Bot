@@ -1,0 +1,24 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "Discord Bot (JS)\r Don't Allowed commercial use this code.\r 상업적으로 위 코드를 사용하는 것을 금합니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wogud0501/Discord-Bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wogud0501/Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/wogud0501/Discord-Bot#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.3.2"
+  }
+}
