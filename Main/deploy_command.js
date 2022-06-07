@@ -3,6 +3,9 @@ const path = require('node:path');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 const { clientID, guildID, token } = require('./config.json');
+const Discord = require('discord.js')
+const allIntents = new Discord.Intents(32767);
+const client = new Discord.Client({ allIntents });
 
 const commands = [];
 const commandsPath = path.join(__dirname, 'commands');
