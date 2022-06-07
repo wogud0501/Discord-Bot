@@ -47,7 +47,22 @@ client.on('guildMemberRemove', async member => {
         console.log(`${member.user.tag}가 서버를 나갔어요. 하지만 누가 추방했는지는 모르겠네요.`)
     }
 })
+client.on('guildBanAdd', async ban => {
+    const fetchedLogs = await ban.guild.fetchAuditLogs({
+        limit: 1,
+        type: 'MEMBER_BAN_ADD',
+    });
+    const banLog = fetchedLogs.entries.first();
 
+    if (!banLog) return console.log(`${ban.user.tag}s는 ${ban.guild.name}에게 밴을 당했지만 감사 로그를 찾지 못했어요.`)
+    const { executor, target } = banLog;
+    if (target.id === ban.user.id) {
+        console.log(`${ban.user.tag}는 ${ban.guild.name}에게 정의의 망치를 쳐 맞았어요! 음. ${executor.tag}가 권력을 마음대로 사용했나 보군요.`)
+    } else {
+        console.log(`${ban.user.tag}는 ${ban.user.guild}에게 정의의 망치를 후드려 맞긴 했는데 누구한테 맞았는지도 모르겠어요. 알아서 잘 찾아보세요~`)
+    }
+    
+})
 
 // Client login code / 클라이언트 로그인 코드
 client.login(token);    
