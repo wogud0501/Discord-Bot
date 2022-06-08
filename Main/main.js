@@ -1,9 +1,8 @@
-// TODO 밴 로거 제작.
 // Client initial setting / 클라이언트 초기 세팅
 const Discord = require('discord.js');
-const allIntents = new Discord.Intents(32767);
-const client = new Discord.Client({ allIntents });
-const { token } = require('your config.json path here.');
+const intents = new Discord.Intents(32767);
+const client = new Discord.Client({ intents });
+const { token } = require('./config.json');
 
 // Client Response Code and Bot status Set up Code / 클라이언트 응답 코드 및 봇 상태 설정 코드
 client.once('ready', () => {
