@@ -1,10 +1,10 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
-module.exports = {
+module.export = {
     data: new SlashCommandBuilder()
-        .setName('프로필')
-        .setDescription('자신의 프로필일 알려줍니다.'),
-    async execute(interaction) {
-        await interaction.reply('퐁!')
-    }
+        .setName('프로필 정보')
+        .setDescription('프로필 정보를 표시합니다.'),
+        async execute(interaction) {
+            return interaction.reply(`당신의 이름: ${interaction.user.username}\n당신의 아이디: ${interaction.user.id}\n당신의 프로필: ${interaction.user.profile}`);  
+        }
 }
